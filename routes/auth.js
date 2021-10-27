@@ -32,7 +32,7 @@ router.post("/register", async (req, res) => {
     });
     // Save user and response
     const user = await newUser.save();
-    res.send("ok");
+    
     res.status(200).json(user);
   } catch (error) {
     return res.status(500).json(error);
